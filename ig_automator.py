@@ -8,15 +8,12 @@ import webbrowser
 import os
 import pyperclip
 
-# @kamkamjohn @poyan_106 @mechellepoon @tomtsangym 
-
 class ig:
     new_conf=0.7
     tag_list=[]
     new_list=[]
     times = -1
-    # fd_list = ['@kamkamjohn', '@puiying_joyce', '@poyan_106', '@mechellepoon', '@tomtsangym']
-    fdd_list = ['@kamkamjohn', '@puiying_joyce', '@poyan_106', '@mechellepoon', '@tomtsangym', '@vic_avo']
+    fdd_list = ['@account1', '@account2', '@account3', '@account4', '@account5', '@account6']
     random.shuffle(fdd_list)
     def __init__(self):
         self.new_conf = new_conf
@@ -233,7 +230,6 @@ class ig:
                     break
             except:
                 time.sleep(0.1)
-                # print('cant find: addposttoyourstory')
 
 
         pyautogui.moveTo(1314, 82)
@@ -244,9 +240,6 @@ class ig:
         for i in ig.new_list:
             i = '@'+i
             pyautogui.write(i)
-            # pyautogui.moveTo(x=615, y=757)
-            # click()
-            # time.sleep(0.2)
             while True:
                 try:
                     startt = pyautogui.locateCenterOnScreen('my_screenshot.png', region = (820,955,130,130), grayscale=True, confidence=ig.new_conf)
@@ -389,38 +382,7 @@ class ig:
                 pyautogui.dragTo(1220, 58, 0.5, button='left')
                 time.sleep(0.3)
                 # print('scrolled2')
-
-    def mute ():
-        print('ig.mute is running1')
-        while True:
-            if keyboard.is_pressed('1'):
-                a = pyautogui.position()
-                pyautogui.moveTo(x=1934, y=389)
-                click()
-                while True:
-                    try:
-                        start3 = pyautogui.locateCenterOnScreen('following.png', region = (500,240,1500,350), grayscale=True, confidence=ig.new_conf)
-                        if start3 is not None:
-                            pyautogui.moveTo(start3)
-                            click()
-                            break
-                    except:
-                        time.sleep(0.25)
-                time.sleep(0.5)
-                pyautogui.moveTo(x=876, y=1281)
-                click()
-                time.sleep(0.5)
-                pyautogui.moveTo(x=1587, y=1163)
-                click()
-                pyautogui.moveTo(x=1586, y=1221)
-                click()
-                time.sleep(0.2)
-                pyautogui.press('esc')
-                time.sleep(0.4)
-                pyautogui.press('esc')
-                time.sleep(0.2)
-                pyautogui.press('esc')
-                pyautogui.moveTo(a)
+                
     def unfollow(times):
         del_count = 0
         while True:
@@ -461,7 +423,4 @@ while True:
         ig.liker(7, comment='n')
         pyautogui.press('alt') #clear bug
         print(f"=   =   =   =   =   =   =prog5 done=   =   =   =   =   =   =")
-    if keyboard.is_pressed('\\'):
-        ig.unfollow()
 # ❤️❤️❤️🔥🔥🔥🔥😂😮😍😢👏
-# ig.ig_automator(full_auto='y', comment=Faqlse) Dior
